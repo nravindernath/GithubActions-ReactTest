@@ -4,5 +4,7 @@ jobs:
   print-issue-details:
     runs-on: ubuntu-latest
     steps:
+      - name: Print Issue Title and Descrption
+        run: echo "Title - ${{ github.event.title }}, Description - ${{ github.event.body }}"
       - name: Print Issue Details
         run: echo "${{ toJSON(github) }}"
